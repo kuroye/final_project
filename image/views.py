@@ -1,8 +1,10 @@
 from django.shortcuts import render
+from django.views import View
+from django.http import HttpResponse
 
 # Create your views here.
+class ImageView(View):
 
-def index(request):
-    if request.method == 'GET':
+    def get(self, request):
 
-        render(request, 'index.html')
+        return render(request, 'index.html')
